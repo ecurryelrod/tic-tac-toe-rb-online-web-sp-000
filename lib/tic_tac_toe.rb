@@ -105,8 +105,9 @@ def winner(board)
 end
 
 def play(board)
-  
-  user_input = gets.strip
+  until over?(board) == false
+    turn(board)
+  end
   if won?(board)
     winner(board) == "X" || winner(board) == "O"
     puts "Congratulations #{winner(board)}!"
