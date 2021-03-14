@@ -110,7 +110,8 @@ def play(board)
     draw?(board)
   end
   until over?(board) == true
-    return won?(board)
+    won?(board)
+    draw?(baord)
   end
   if won?(board)
     winner(board) == "X" || winner(board) == "O"
