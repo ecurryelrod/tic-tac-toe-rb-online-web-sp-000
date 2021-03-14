@@ -107,14 +107,16 @@ end
 def play(board)
   user_input = gets.strip
   counter = 0
-  until over?(board) == true
+  until counter == 9
     turn(board)
     counter += 1
   end
   if won?(board)
     winner(board) == "X" || winner(board) == "O"
     puts "Congratulations #{winner(board)}!"
+    over?(board)
   else draw?(board)
     puts "Cat's game"
+    over?(board)
   end
 end
