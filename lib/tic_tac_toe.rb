@@ -106,7 +106,8 @@ end
 
 def play(board)
   while over?(board) == false
-    return turn(board)
+    turn(board)
+    draw?(board)
   end
   until over?(board) == true
     return won?(board)
