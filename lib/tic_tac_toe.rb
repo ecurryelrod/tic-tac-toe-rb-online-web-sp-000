@@ -112,5 +112,7 @@ def play(board)
     counter += 1
   end
   if won?(board)
-    winner
+    winner(board) == "X" || winner(board) == "O"
+    puts "Congratulations #{winner(board)}"
+    
 end
