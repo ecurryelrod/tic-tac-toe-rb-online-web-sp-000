@@ -110,6 +110,7 @@ def play(board)
     won?(board)
     draw?(baord)
   end
+  return false
   if won?(board)
     winner(board) == "X" || winner(board) == "O"
     puts "Congratulations #{winner(board)}!"
